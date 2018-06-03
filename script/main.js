@@ -3,6 +3,7 @@ var ourList = document.getElementById("our-list");
 var ourButton = document.getElementById("our-button");
 var ourHeadline = document.getElementById("our-headline");
 var listItems = document.getElementById("our-list").getElementsByTagName("li");
+var secondButton = document.getElementById("displaymessage");
 
 /* Example of changing all the elements in listItems to Hello World.
 for (i = 0; i < listItems.length; i++) {
@@ -32,6 +33,11 @@ function activateItem(e) {
 }
 
 ourButton.addEventListener("click", createNewItem)
+secondButton.addEventListener("click",messageFunc)
+
+function messageFunc() {
+    alert("You pressed the message button!");
+}
 
 function createNewItem() {
     ourList.innerHTML += "<li>something new " + newItemCounter + "</li>";
